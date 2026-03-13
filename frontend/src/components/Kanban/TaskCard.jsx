@@ -105,10 +105,10 @@ const TaskCard = React.memo(({ task, index, onEdit, onDelete }) => {
                             {task.assignedTo && (
                                 <div className="flex items-center gap-2 bg-indigo-100 dark:bg-indigo-900/40 pr-2 pl-1 py-1 rounded-full border border-indigo-200 dark:border-indigo-700">
                                     <div className="w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center text-[9px] text-white font-bold">
-                                        {task.assignedTo.name?.[0].toUpperCase()}
+                                        {task.assignedTo.name?.[0]?.toUpperCase()}
                                     </div>
                                     <span className="text-[10px] font-bold text-indigo-700 dark:text-indigo-300 truncate max-w-[70px]">
-                                        {task.assignedTo.name.split(' ')[0]}
+                                        {task.assignedTo.name?.split(' ')[0]}
                                     </span>
                                 </div>
                             )}

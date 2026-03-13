@@ -88,11 +88,11 @@ export const useKanban = () => {
             // Legacy tasks might not have team, or we might want to show them in a specific way?
             // For now, STRICT filtering by team.
             // Check if task.team matches selectedTeam.id
-            const taskTeamId = typeof task.team === 'object' ? task.team._id : task.team; // Populate check
+            const taskTeamId = task.team && typeof task.team === 'object' ? task.team._id : task.team; // Populate check
 
             // selectedTeam.id is usually a string from database _id conversion
             // Ensure comparison is safe (string vs string)
-            const matchesTeam = String(taskTeamId) === String(selectedTeam.id);
+            const matchesTeam = taskTeamId ? String(taskTeamId) === String(selectedTeam.id) : false;
 
             const matchesSearch = task.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 task.description.toLowerCase().includes(searchQuery.toLowerCase());
