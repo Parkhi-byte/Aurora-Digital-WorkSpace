@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://digital-workspace.onrender.com/api/$1"
+    },
+    {
+      "source": "/uploads/(.*)",
+      "destination": "https://digital-workspace.onrender.com/uploads/$1"
+    },
+    {
+      "source": "/socket.io/(.*)",
+      "destination": "https://digital-workspace.onrender.com/socket.io/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

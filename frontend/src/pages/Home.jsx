@@ -64,10 +64,10 @@ const Home = () => {
             transition={{ delay: 0.1 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tight px-2">
               <span className="text-gray-900 dark:text-white">The Digital Workspace for</span>
-              <br />
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
+              <br className="hidden sm:block" />
+              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent sm:ml-2">
                 Modern Teams
               </span>
             </h1>
@@ -81,13 +81,13 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-20"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16 sm:mb-20 px-4 sm:px-0 w-full"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate('/pricing')}
-              className="flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 group"
+              className="w-full sm:w-auto flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 group"
             >
               <span>Get Started Free</span>
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -96,7 +96,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate('/about')}
-              className="flex items-center justify-center bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl text-gray-900 dark:text-white border-2 border-gray-200/50 dark:border-gray-700/50 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white dark:hover:bg-gray-800 transition-all shadow-lg group"
+              className="w-full sm:w-auto flex items-center justify-center bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl text-gray-900 dark:text-white border-2 border-gray-200/50 dark:border-gray-700/50 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white dark:hover:bg-gray-800 transition-all shadow-lg group"
             >
               <PlayCircle size={20} className="mr-2 group-hover:scale-110 transition-transform" />
               <span>View Demo</span>
@@ -108,7 +108,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
           >
             {stats.map((stat, index) => {
               const Icon = stat.icon;

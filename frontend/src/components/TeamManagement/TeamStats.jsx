@@ -33,7 +33,7 @@ const TeamStats = ({ stats, activities }) => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6"
         >
             {/* Stat Card 1: Total Members */}
             <motion.div
@@ -57,7 +57,7 @@ const TeamStats = ({ stats, activities }) => {
                         <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">Total Members</span>
                     </div>
 
-                    <h3 className="text-5xl font-black bg-gradient-to-br from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-4">{total}</h3>
+                    <h3 className="text-3xl sm:text-5xl font-black bg-gradient-to-br from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-4">{total}</h3>
 
                     <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-xs px-3 py-1.5 rounded-full bg-gradient-to-r from-emerald-100 to-green-100 dark:from-emerald-900/40 dark:to-green-900/40 text-emerald-700 dark:text-emerald-300 font-bold border border-emerald-300/50 dark:border-emerald-600/50 shadow-sm">

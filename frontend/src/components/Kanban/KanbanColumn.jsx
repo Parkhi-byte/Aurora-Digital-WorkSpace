@@ -44,7 +44,7 @@ const KanbanColumn = React.memo(({ title, items, status, onAdd, onEdit, onDelete
     const colors = getColumnColors();
 
     return (
-        <div className={`flex-1 min-w-[320px] max-w-[400px] w-full ${colors.bg} rounded-2xl p-4 flex flex-col h-full border ${colors.border}`}>
+        <div className={`flex-1 min-w-[280px] sm:min-w-[320px] max-w-[400px] w-full ${colors.bg} rounded-2xl p-4 flex flex-col h-full border ${colors.border}`}>
             {/* Column Header */}
             <div className="flex items-center justify-between mb-4 px-1">
                 <div className="flex items-center gap-3">
