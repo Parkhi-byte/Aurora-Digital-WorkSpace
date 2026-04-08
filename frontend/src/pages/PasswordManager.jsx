@@ -45,7 +45,7 @@ const PasswordManager = () => {
                 <Shield className="text-white" size={32} strokeWidth={2.5} />
               </motion.div>
               <div>
-                <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 dark:from-white dark:via-indigo-200 dark:to-purple-200 bg-clip-text text-transparent">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 dark:from-white dark:via-indigo-200 dark:to-purple-200 bg-clip-text text-transparent">
                   Password Vault
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400 mt-1 font-medium">Securely manage your credentials</p>
@@ -81,7 +81,7 @@ const PasswordManager = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
         >
           {categories.map((cat, idx) => {
             const count = groupedPasswords[cat.value]?.length || 0;

@@ -78,10 +78,10 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="text-5xl md:text-7xl font-black mb-8 tracking-tight text-gray-900 dark:text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-black mb-8 tracking-tight text-gray-900 dark:text-white leading-tight px-2"
           >
             Building the future of{' '}
-            <br />
+            <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
               collaboration
             </span>
@@ -107,7 +107,7 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
           >
             {stats.map((stat, index) => (
               <motion.div

@@ -70,13 +70,13 @@ const Profile = () => {
 
                         <div className="flex-1 space-y-3">
                             <div>
-                                <h1 className="text-4xl font-black text-gray-900 dark:text-white mb-1 tracking-tight">{user?.name}</h1>
+                                <h1 className="text-2xl sm:text-4xl font-black text-gray-900 dark:text-white mb-1 tracking-tight">{user?.name}</h1>
                                 <p className="text-gray-500 dark:text-gray-400 font-medium">Manage your personal details and settings</p>
                             </div>
 
                             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-                                <span className="flex items-center gap-2 text-sm bg-gray-100 dark:bg-gray-700/50 px-4 py-2 rounded-xl font-medium text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-600">
-                                    <Mail size={16} className="text-indigo-500" /> {user?.email}
+                                <span className="flex items-center gap-2 text-sm bg-gray-100 dark:bg-gray-700/50 px-4 py-2 rounded-xl font-medium text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-600 min-w-0">
+                                    <Mail size={16} className="text-indigo-500 shrink-0" /> <span className="truncate">{user?.email}</span>
                                 </span>
                                 <span className="flex items-center gap-2 text-sm bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 px-4 py-2 rounded-xl font-bold border border-indigo-100 dark:border-indigo-800 capitalize">
                                     <Shield size={16} /> {user?.role || 'Member'}

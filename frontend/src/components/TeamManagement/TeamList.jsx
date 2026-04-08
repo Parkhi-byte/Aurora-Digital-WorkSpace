@@ -72,7 +72,7 @@ const TeamList = ({ filteredMembers, teamMembers, searchTerm, setSearchTerm, hov
             <div className="p-8 pb-4 border-b border-white/10 dark:border-gray-700/30 z-20">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6">
                     <div>
-                        <h3 className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight">Team Members</h3>
+                        <h3 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">Team Members</h3>
                         <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm font-medium">
                             You have <span className="text-indigo-600 dark:text-indigo-400 font-bold">{processedMembers.length}</span> {roleFilter !== 'all' ? `${roleFilter}(s)` : 'active members'}
                         </p>

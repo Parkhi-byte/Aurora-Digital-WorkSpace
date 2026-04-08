@@ -106,7 +106,7 @@ export default function Pricing() {
             Simple, Transparent Pricing
           </motion.div>
 
-          <h1 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 tracking-tight leading-tight">
             Choose the plan that fits{' '}
             <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
               your team
@@ -218,7 +218,7 @@ export default function Pricing() {
           transition={{ delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 shadow-md text-gray-600 dark:text-gray-400 text-sm font-medium">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-2 px-5 py-3 rounded-2xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 shadow-md text-gray-600 dark:text-gray-400 text-sm font-medium text-center">
             <Shield size={16} className="text-emerald-500" />
             <span>Secure payments · 30-day money-back guarantee · Cancel anytime</span>
           </div>

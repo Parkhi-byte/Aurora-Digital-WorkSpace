@@ -185,7 +185,7 @@ const Dashboard = () => {
                             <Calendar size={16} className="text-indigo-500" />
                             {today}
                         </p>
-                        <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-2">
+                        <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-2">
                             Welcome back, <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">{user.name.split(' ')[0]}</span>
                         </h1>
                         <p className="text-gray-600 dark:text-gray-400 font-medium flex items-center gap-2">
@@ -193,13 +193,13 @@ const Dashboard = () => {
                             Ready to make today productive?
                         </p>
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto mt-4 md:mt-0">
                         {user.role !== 'team_member' && (
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={() => navigate('/kanban', { state: { openNewTask: true } })}
-                                className="flex items-center gap-2 px-5 py-3 bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 rounded-2xl text-sm font-bold hover:bg-white dark:hover:bg-gray-800 transition-all shadow-lg"
+                                className="w-full sm:w-auto justify-center flex items-center gap-2 px-5 py-3 bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 rounded-2xl text-sm font-bold hover:bg-white dark:hover:bg-gray-800 transition-all shadow-lg"
                             >
                                 <Plus size={18} strokeWidth={2.5} /> New Task
                             </motion.button>
@@ -208,7 +208,7 @@ const Dashboard = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => navigate('/video-call')}
-                            className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-2xl text-sm font-bold transition-all shadow-lg shadow-indigo-500/30"
+                            className="w-full sm:w-auto justify-center flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-2xl text-sm font-bold transition-all shadow-lg shadow-indigo-500/30"
                         >
                             <Video size={18} strokeWidth={2.5} /> New Meeting
                         </motion.button>
@@ -216,7 +216,7 @@ const Dashboard = () => {
                 </motion.div>
 
                 {/* ─── Analytics Stats Row ───────────────────────────────────── */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
                     {[
                         {
                             label: 'Total Tasks',

@@ -55,7 +55,7 @@ const Notifications = () => {
           className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8"
         >
           <div>
-            <h1 className="text-4xl font-black bg-gradient-to-r from-gray-900 to-indigo-600 dark:from-white dark:to-indigo-400 bg-clip-text text-transparent">Notifications</h1>
+            <h1 className="text-2xl sm:text-4xl font-black bg-gradient-to-r from-gray-900 to-indigo-600 dark:from-white dark:to-indigo-400 bg-clip-text text-transparent">Notifications</h1>
             <p className="text-gray-500 dark:text-gray-400 mt-1 font-medium">Stay updated with your team activity.</p>
           </div>
 

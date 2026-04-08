@@ -47,55 +47,48 @@ const DocumentShare = () => {
             <p className="text-gray-500 dark:text-gray-400 mt-1">Manage and share files with your team.</p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2">
             {/* Team Selector */}
-            <div className="relative">
-              <select
-                value={selectedTeam?.id || ''}
-                onChange={(e) => {
-                  const team = teams.find(t => t.id === e.target.value);
-                  setSelectedTeam(team);
-                  setCurrentFolder(null); // Reset to root
-                }}
-                className="appearance-none pl-3 pr-8 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm font-medium focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer shadow-sm text-gray-700 dark:text-gray-300 min-w-[150px]"
-              >
-                {teams.map(team => (
-                  <option key={team.id} value={team.id}>{team.name}</option>
-                ))}
-              </select>
-            </div>
+            <select
+              value={selectedTeam?.id || ''}
+              onChange={(e) => {
+                const team = teams.find(t => t.id === e.target.value);
+                setSelectedTeam(team);
+                setCurrentFolder(null);
+              }}
+              className="appearance-none pl-3 pr-8 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm font-medium focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer shadow-sm text-gray-700 dark:text-gray-300 min-w-[120px]"
+            >
+              {teams.map(team => (
+                <option key={team.id} value={team.id}>{team.name}</option>
+              ))}
+            </select>
 
-            <div className="relative">
+            <div className="relative flex-1 min-w-[120px]">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
               <input
                 type="text"
                 placeholder="Search..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 pr-4 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm focus:ring-2 focus:ring-aurora-500/20 focus:border-aurora-500 w-48 transition-all"
+                className="pl-10 pr-4 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm focus:ring-2 focus:ring-aurora-500/20 focus:border-aurora-500 w-full transition-all"
               />
             </div>
 
-            <input
-              type="file"
-              ref={fileInputRef}
-              onChange={onFileSelect}
-              className="hidden"
-            />
+            <input type="file" ref={fileInputRef} onChange={onFileSelect} className="hidden" />
 
             <button
               onClick={() => setIsCreateFolderOpen(true)}
-              className="flex items-center px-4 py-2.5 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-white rounded-xl font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              className="flex items-center gap-1.5 px-3 py-2.5 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-white rounded-xl font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors whitespace-nowrap"
             >
-              <Plus size={18} className="mr-2" /> Folder
+              <Plus size={18} /> <span className="hidden sm:inline">Folder</span>
             </button>
 
             <button
               onClick={() => fileInputRef.current?.click()}
-              className="flex items-center space-x-2 px-5 py-2.5 bg-aurora-600 text-white rounded-xl font-medium hover:bg-aurora-700 transition-colors shadow-lg shadow-aurora-500/20"
+              className="flex items-center gap-1.5 px-3 sm:px-5 py-2.5 bg-aurora-600 text-white rounded-xl font-medium hover:bg-aurora-700 transition-colors shadow-lg shadow-aurora-500/20 whitespace-nowrap"
             >
               <Upload size={18} />
-              <span>Upload</span>
+              <span className="hidden sm:inline">Upload</span>
             </button>
           </div>
         </div>

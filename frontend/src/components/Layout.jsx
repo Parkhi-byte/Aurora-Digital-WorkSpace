@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
       {!shouldHideFooter && (
         <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto">
           <div className="w-full px-4 py-10">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               <div>
                 <div className="flex items-center space-x-1 mb-3">
                   <div className="relative w-8 h-8 flex items-center justify-center">
